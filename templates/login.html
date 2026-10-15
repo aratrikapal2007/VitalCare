@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Welcome Back · VitalCare{% endblock %}
+{% block body_class %}auth-page{% endblock %}
+{% block content %}
+<div class="auth-layout">
+  <section class="auth-intro"><div class="eyebrow">CARE, CONNECTED</div><h1>Better care starts with a clearer picture.</h1><p>Secure access to the information your care team needs, all in one place.</p><div class="trust-row"><span class="trust-icon">✓</span><span>Patient-centred care</span><span class="trust-icon">✓</span><span>Connected records</span></div></section>
+  <section class="auth-card"><div class="auth-brand"><span class="brand-mark">+</span> VitalCare</div><h2>Welcome back</h2><p class="muted">Sign in to continue to your workspace.</p>
+    <form method="post" class="form-stack"><div class="field"><label for="username">Username</label><input id="username" name="username" autocomplete="username" placeholder="Enter your username" required></div><div class="field"><label for="password">Password</label><input id="password" type="password" name="password" autocomplete="current-password" placeholder="Enter your password" required></div><button class="btn btn-primary btn-block" type="submit">Sign In <span aria-hidden="true">→</span></button></form>
+    <div class="auth-bottom"><span>Need administrator access?</span><a href="{{ url_for('main.admin_access') }}">Open Admin Portal</a></div>
+  </section>
+</div>
+<div class="login-note">Patient: patient / demo-only &nbsp;·&nbsp; Doctor: sana / demo-only</div>
+{% endblock %}

@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{% block title %}Admin Portal · VitalCare{% endblock %}
+{% block body_class %}auth-page{% endblock %}
+{% block content %}<div class="narrow-wrap"><section class="auth-card"><a class="back-link" href="{{ url_for('main.login') }}">← Back to sign in</a><div class="auth-brand"><span class="brand-mark">+</span> VitalCare</div><h2>Admin Portal</h2><p class="muted">Enter your administrator access code to continue.</p><form method="post" class="form-stack"><div class="field"><label for="code">Access code</label><input id="code" name="code" type="password" autocomplete="current-password" required></div><button class="btn btn-primary btn-block" type="submit">Continue <span aria-hidden="true">→</span></button></form></section></div>{% endblock %}
