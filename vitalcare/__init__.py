@@ -11,7 +11,7 @@ def create_app(test_config=None):
     app.config.from_mapping(
         SECRET_KEY=os.environ.get("VITALCARE_SECRET_KEY", "local-development-secret-change-before-deployment"),
         DATABASE=os.path.join(app.instance_path, "vitalcare.db"),
-        ADMIN_OVERRIDE_CODE=" ",
+        ADMIN_OVERRIDE_CODE="override-2024",
     )
     if test_config:
         app.config.update(test_config)
